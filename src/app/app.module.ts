@@ -13,6 +13,7 @@ import { PagesComponent } from './pages/pages.component';
 import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PagesComponent,
     MediaComponent,
     SettingsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
