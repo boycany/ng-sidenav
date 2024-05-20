@@ -12,9 +12,9 @@ export class BodyComponent {
   constructor() {}
 
   getBodyClass(): string {
-    console.log('-----getBodyClass------');
-    console.log('this.collapsed :>> ', this.collapsed);
-    console.log('this.screenWidth :>> ', this.screenWidth);
+    // console.log('-----getBodyClass------');
+    // console.log('this.collapsed :>> ', this.collapsed);
+    // console.log('this.screenWidth :>> ', this.screenWidth);
     let styleClass = '';
     if (this.collapsed && this.screenWidth > 768) {
       styleClass = 'body-trimmed';
@@ -26,7 +26,7 @@ export class BodyComponent {
       styleClass = 'body-md-screen';
     }
 
-    console.log('styleClass :>> ', styleClass);
+    // console.log('styleClass :>> ', styleClass);
     return styleClass;
   }
 }

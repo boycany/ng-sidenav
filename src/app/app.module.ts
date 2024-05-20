@@ -14,6 +14,8 @@ import { MediaComponent } from './media/media.component';
 import { SettingsComponent } from './settings/settings.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './header/header.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkMenuModule } from '@angular/cdk/menu';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
+    OverlayModule,
+    CdkMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
