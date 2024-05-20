@@ -16,7 +16,7 @@
         <div class="head-content-right">
             <div class="head-menu">
                 <div class="head-menu-item">
-                    <button class="head-menu-item-btn ripple">
+                    <button class="head-menu-item-btn ripple" [cdkMenuTriggerFor]="languageOverlay">
                         <fa-icon [icon]="faFlag"></fa-icon>
                     </button>
                 </div>
@@ -49,10 +49,20 @@
 </div>
 
 <ng-template #searchOverlay>
-    <div class="overlay overlay-search overlay-fall" cdkMenu>
+    <div class="overlay overlay-search overlay-fall" cdkMenu [style.transform-origin]="'top left'">
         <input type="search" class="search" name="" id="" placeholder="Search...">
         <button class="search-btn">
             <fa-icon [icon]="faSearch"></fa-icon>
         </button>
+    </div>
+</ng-template>
+
+<ng-template #languageOverlay>
+    <div class="overlay overlay-language overlay-fall" cdkMenu [style]="{ 'transform-origin': 'top left' }">
+        <ul>
+            <li *ngFor="let lang of languages" cdkMenuItem>
+                <span>{{ lang.language }}</span>
+            </li>
+        </ul>
     </div>
 </ng-template>

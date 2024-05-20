@@ -6,6 +6,7 @@ import {
   faBell,
   faCommentAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { languages } from './header-dummy-data';
 
 @Component({
   selector: 'app-header',
@@ -23,6 +24,9 @@ export class HeaderComponent {
   faCommentAlt = faCommentAlt;
 
   canShowSearchAsOverlay = false;
+  selectedLanguage: any;
+
+  languages = languages;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -31,6 +35,7 @@ export class HeaderComponent {
 
   ngOnInit(): void {
     this.checkCanShowSearchAsOverlay(window.innerWidth);
+    this.selectedLanguage = this.languages[0];
   }
 
   getHeadClass(): string {
